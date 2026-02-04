@@ -13,14 +13,14 @@ const questions = [
     q: "What is the full form of KYC?",
     o: [
       "Know Your Customer",
-      "Keep Your Cash",
+      "Keep Your Customer",
       "Know Your Credit",
-      "Keep Your Customer"
+      "Keep Your Cash"
     ],
     a: 0
   },
   {
-    q: "Which organization regulates banks in India?",
+    q: "Which institution regulates banks in India?",
     o: [
       "SEBI",
       "IRDAI",
@@ -30,4 +30,3 @@ const questions = [
     a: 2
   }
 ];
-
