@@ -13,9 +13,8 @@ body {
 .left-panel {
   width: 260px;
   background: #e8edf3;
-  padding: 10px;
-  overflow-y: auto;
-  border-right: 1px solid #ccc;
+  padding: 12px;
+  border-right: 1px solid #cfd8dc;
 }
 
 .left-panel h3 {
@@ -32,10 +31,10 @@ body {
 .q-btn {
   padding: 8px;
   border: none;
-  cursor: pointer;
-  background: #cfd6df;
-  font-weight: bold;
   border-radius: 4px;
+  background: #cfd6df;
+  cursor: pointer;
+  font-weight: bold;
 }
 
 .q-btn.attempted {
@@ -67,8 +66,8 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: white;
   padding: 10px 20px;
+  background: white;
   border-bottom: 1px solid #ccc;
 }
 
@@ -78,10 +77,10 @@ body {
 }
 
 .status-badge {
-  padding: 6px 12px;
+  padding: 6px 14px;
   border-radius: 20px;
   font-weight: bold;
-  margin-left: 5px;
+  margin-left: 8px;
 }
 
 .attempted {
@@ -94,7 +93,7 @@ body {
   color: #c62828;
 }
 
-/* QUESTION AREA (CENTERED) */
+/* QUESTION AREA */
 #questionBox {
   flex: 1;
   display: flex;
@@ -106,9 +105,9 @@ body {
 
 #questionText {
   font-size: 22px;
-  margin-bottom: 20px;
   text-align: center;
   max-width: 900px;
+  margin-bottom: 25px;
 }
 
 #options {
@@ -122,8 +121,8 @@ body {
   padding: 12px;
   margin-bottom: 12px;
   border-radius: 6px;
-  cursor: pointer;
   border: 1px solid #ccc;
+  cursor: pointer;
   font-size: 18px;
 }
 
@@ -135,8 +134,8 @@ body {
 .navigation {
   display: flex;
   justify-content: center;
+  gap: 12px;
   padding: 15px;
-  gap: 10px;
   background: white;
   border-top: 1px solid #ccc;
 }
