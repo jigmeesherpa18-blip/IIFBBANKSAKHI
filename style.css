@@ -1,1 +1,87 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+/* Left panel */
+.left-panel {
+  width: 260px;
+  background: #e9edf2;
+  padding: 10px;
+  overflow-y: auto;
+}
+
+.left-panel h3 {
+  text-align: center;
+}
+
+#questionList {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 5px;
+}
+
+.q-btn {
+  padding: 8px;
+  border: none;
+  cursor: pointer;
+  background: #ccc;
+}
+
+.q-btn.attempted {
+  background: #4caf50;
+  color: #fff;
+}
+
+#submitBtn {
+  width: 100%;
+  margin-top: 15px;
+  padding: 10px;
+  background: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+/* Main panel */
+.main-panel {
+  flex: 1;
+  padding: 20px;
+  background: #fff;
+}
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+#timer {
+  font-weight: bold;
+}
+
+#questionText {
+  font-size: 18px;
+}
+
+#options label {
+  display: block;
+  margin: 10px 0;
+  cursor: pointer;
+}
+
+.navigation {
+  margin-top: 20px;
+}
+
+.navigation button {
+  padding: 8px 15px;
+  margin-right: 10px;
+}
 
