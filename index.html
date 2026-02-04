@@ -21,10 +21,9 @@
     <div class="top-bar">
       <div id="timer">01:00:00</div>
       <div id="status">
-        <span class="attempted">0 Attempted</span> |
-        <span class="not-attempted">0 Not Attempted</span>
-      </div>
-    </div>
+  <span class="status-badge attempted">0 Attempted</span>
+  <span class="status-badge not-attempted">0 Not Attempted</span>
+</div>
 
     <div id="questionBox">
       <h2 id="questionText"></h2>
@@ -32,9 +31,11 @@
     </div>
 
     <div class="navigation">
-      <button onclick="prevQuestion()">Previous</button>
-      <button onclick="nextQuestion()">Next</button>
-    </div>
+  <button onclick="prevQuestion()">Previous</button>
+  <button class="clear-btn" onclick="clearAnswer()">Clear Answer</button>
+  <button onclick="nextQuestion()">Next</button>
+</div>
+
   </div>
 
 </div>
