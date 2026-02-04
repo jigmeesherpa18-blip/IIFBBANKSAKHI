@@ -14,8 +14,10 @@ function loadQuestion(index) {
   q.o.forEach((opt, i) => {
     const label = document.createElement("label");
     label.innerHTML = `
-      <input type="radio" name="option" ${answers[index] === i ? "checked" : ""} 
-      onclick="selectAnswer(${i})"> ${opt}
+      <input type="radio" name="option"
+        ${answers[index] === i ? "checked" : ""}
+        onclick="selectAnswer(${i})">
+      ${opt}
     `;
     optionsDiv.appendChild(label);
   });
@@ -23,6 +25,13 @@ function loadQuestion(index) {
 
 function selectAnswer(option) {
   answers[currentQuestion] = option;
+  updateQuestionButtons();
+  updateStatus();
+}
+
+function clearAnswer() {
+  answers[currentQuestion] = null;
+  loadQuestion(currentQuestion);
   updateQuestionButtons();
   updateStatus();
 }
@@ -57,14 +66,15 @@ function createQuestionButtons() {
 
 function updateQuestionButtons() {
   document.querySelectorAll(".q-btn").forEach((btn, i) => {
-    if (answers[i] !== null) btn.classList.add("attempted");
+    btn.classList.toggle("attempted", answers[i] !== null);
   });
 }
 
 function updateStatus() {
   const attempted = answers.filter(a => a !== null).length;
-  document.querySelector(".attempted").innerText = attempted + " Attempted";
-  document.querySelector(".not-attempted").innerText =
+  document.querySelector(".status-badge.attempted").innerText =
+    attempted + " Attempted";
+  document.querySelector(".status-badge.not-attempted").innerText =
     (questions.length - attempted) + " Not Attempted";
 }
 
@@ -79,7 +89,7 @@ function startTimer() {
     let m = Math.floor((timeLeft % 3600) / 60);
     let s = timeLeft % 60;
     document.getElementById("timer").innerText =
-      `${String(h).padStart(2, '0')}:${String(m).padStart(2, '0')}:${String(s).padStart(2, '0')}`;
+      `${String(h).padStart(2, "0")}:${String(m).padStart(2, "0")}:${String(s).padStart(2, "0")}`;
   }, 1000);
 }
 
@@ -95,4 +105,3 @@ createQuestionButtons();
 loadQuestion(0);
 updateStatus();
 startTimer();
-
