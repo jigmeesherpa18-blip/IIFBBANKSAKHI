@@ -1,1 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>IIBF Mock Test</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+  <!-- Left Panel -->
+  <div class="left-panel">
+    <h3>Questions</h3>
+    <div id="questionList"></div>
+    <button id="submitBtn">SUBMIT TEST</button>
+  </div>
+
+  <!-- Main Panel -->
+  <div class="main-panel">
+    <div class="top-bar">
+      <div id="timer">01:00:00</div>
+      <div id="status">
+        <span class="attempted">0 Attempted</span> |
+        <span class="not-attempted">0 Not Attempted</span>
+      </div>
+    </div>
+
+    <div id="questionBox">
+      <h2 id="questionText"></h2>
+      <div id="options"></div>
+    </div>
+
+    <div class="navigation">
+      <button onclick="prevQuestion()">Previous</button>
+      <button onclick="nextQuestion()">Next</button>
+    </div>
+  </div>
+
+</div>
+
+<script src="questions.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
 
